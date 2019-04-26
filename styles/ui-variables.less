@@ -1,6 +1,6 @@
 /*
-Include the standard variables from Mailspring's base theme:
-https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variables.less#L37:L40
+    Include the standard variables from Mailspring's base theme:
+    https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variables.less#L37:L40
 */
 @import "base/ui-variables";
 
@@ -12,13 +12,13 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variable
 @gray-lighter: darken(@gray-base, 92.5%);
 @white: #0a0a0a;
 
-@accent-primary: #58b660;
+@accent-primary: #5295B7;
 @accent-primary-dark: darken(@accent-primary, 10%);
 
-@background-primary: #212121;
-@background-off-primary: #212121;
-@background-secondary: #121212;
-@background-tertiary: #6d7987;
+@background-primary: #232830;
+@background-off-primary: #191E26;
+@background-secondary: #191E26;
+@background-tertiary: #31353D;
 
 @border-color-primary: lighten(@background-primary, 10%);
 @border-color-secondary: lighten(@background-secondary, 10%);
@@ -40,13 +40,50 @@ https://github.com/Foundry376/Mailspring/blob/master/app/static/base/ui-variable
 @btn-default-bg-color: lighten(@background-primary, 5%);
 @dropdown-default-bg-color: #404040;
 
-@input-bg: #2e2e2e;
+@input-bg: #232830;
 @input-border: @border-color-divider;
 
-@list-bg: #333;
+@list-bg: lighten(@background-primary, 5%);
 @list-border: #383838;
 @list-selected-color: @text-color-inverse;
 @list-focused-color: @text-color;
 
-@toolbar-background-color: #121212;
-@panel-background-color: #121212;
+@toolbar-background-color: #191E26;
+@panel-background-color: #191E26;
+
+.sheet-toolbar {
+  border-bottom: 1px solid @border-color-divider;
+  box-shadow: none;
+}
+
+.thread-icon:not(.thread-icon-unread):not(.thread-icon-star) {
+  -webkit-filter: invert(100%);
+}
+img.content-dark {
+  -webkit-filter: invert(100%);
+}
+img.content-light {
+  -webkit-filter: invert(100%);
+}
+
+.mail-label {
+  -webkit-filter: contrast(110%) brightness(85%);
+}
+
+#message-list .message-item-wrap .message-item-white-wrap {
+  box-shadow: 0 0 0.5px rgba(255, 255, 255, 0.28), 0 1px 1.5px rgba(255, 255, 255, 0.08);
+}
+
+.thread-list .list-item:not(.unread):not(.selected):not(.focused) {
+  color: #aaa;
+}
+
+.scrollbar-track {
+  background: transparent;
+  border: 0;
+}
+
+.scrollbar-track .scrollbar-handle {
+  background-color: darken(@background-primary, 8%);
+  border: 0;
+}
